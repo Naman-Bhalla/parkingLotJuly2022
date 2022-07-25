@@ -2,7 +2,7 @@ package com.scaler.parkinglot.dtos;
 
 import com.scaler.parkinglot.models.ParkingLot;
 
-public class CreateParkingLotResponseDto {
+public class CreateParkingLotResponseDto extends ResponseDto {
     private ParkingLot parkingLot;
     private ResponseStatusDto responseStatus;
 //    private Response

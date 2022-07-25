@@ -5,16 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb562a1e-0184-41ef-b531-b9cc3dc20f9b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/ObjectRegistry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/controllers/ParkingLotController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/dtos/CreateParkingLotRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/dtos/CreateParkingLotResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/dtos/ResponseStatusDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/repositories/ParkingLotRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/services/ParkingLotService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/controllers/TicketController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/dtos/GenerateTicketRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/dtos/GenerateTicketResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/dtos/ResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/dtos/UpdateParkingLotRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/dtos/UpdateParkingLotResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/repositories/TicketRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/services/TicketService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/strategies/spotassignmentstrategy/RandomSpotAssignmentStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/models/DisplayBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/models/DisplayBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/controllers/ParkingLotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/controllers/ParkingLotController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/dtos/CreateParkingLotResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/dtos/CreateParkingLotResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/models/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/models/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/repositories/ParkingLotRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/repositories/ParkingLotRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/services/ParkingLotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/services/ParkingLotService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/strategies/spotassignmentstrategy/SpotAssignmentStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/strategies/spotassignmentstrategy/SpotAssignmentStrategy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1658760343532</updated>
       <workItem from="1658760344920" duration="105000" />
-      <workItem from="1658761214777" duration="7506000" />
+      <workItem from="1658761214777" duration="11026000" />
     </task>
     <servers />
   </component>
@@ -108,8 +115,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/Client.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="1" />
+          <line>46</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/scaler/parkinglot/Client.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

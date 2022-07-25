@@ -7,7 +7,6 @@ public class Ticket extends BaseModel {
     private Vehicle vehicle;
     private ParkingSpot parkingSpot;
     private Operator generatedBy;
-    private EntryGate gate;
 
     private ParkingLot parkingLot;
     private EntryGate entryGate;
@@ -70,11 +69,4 @@ public class Ticket extends BaseModel {
         this.generatedBy = generatedBy;
     }
 
-    public EntryGate getGate() {
-        return gate;
-    }
-
-    public void setGate(EntryGate gate) {
-        this.gate = gate;
-    }
 }

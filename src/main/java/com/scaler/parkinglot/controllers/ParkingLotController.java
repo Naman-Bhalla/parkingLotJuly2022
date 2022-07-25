@@ -1,8 +1,6 @@
 package com.scaler.parkinglot.controllers;
 
-import com.scaler.parkinglot.dtos.CreateParkingLotRequestDto;
-import com.scaler.parkinglot.dtos.CreateParkingLotResponseDto;
-import com.scaler.parkinglot.dtos.ResponseStatusDto;
+import com.scaler.parkinglot.dtos.*;
 import com.scaler.parkinglot.models.ParkingFloor;
 import com.scaler.parkinglot.models.ParkingLot;
 import com.scaler.parkinglot.services.ParkingLotService;
@@ -41,6 +39,18 @@ public class ParkingLotController {
         response.setParkingLot(createdParkingLot);
         response.setResponseStatus(ResponseStatusDto.SUCCESS);
         return response;
+    }
+
+
+    public UpdateParkingLotResponseDto updateAddress(UpdateParkingLotRequestDto request) {
+        ParkingLot updatedParkingLot = parkingLotService.updateAddress(
+                request.getParkingLotId(), request.getAddress()
+        );
+
+        UpdateParkingLotResponseDto responseDto = new UpdateParkingLotResponseDto();
+        responseDto.setParkingLot(updatedParkingLot);
+        responseDto.setResponseStatus(ResponseStatusDto.SUCCESS);
+        return responseDto;
     }
 }
 
