@@ -2,14 +2,18 @@ package com.scaler.parkinglot;
 
 import com.scaler.parkinglot.controllers.ParkingLotController;
 import com.scaler.parkinglot.controllers.TicketController;
+import com.scaler.parkinglot.controllers.VehicleController;
 import com.scaler.parkinglot.dtos.*;
 import com.scaler.parkinglot.models.ParkingLot;
 import com.scaler.parkinglot.repositories.ParkingLotRepository;
 import com.scaler.parkinglot.repositories.TicketRepository;
+import com.scaler.parkinglot.repositories.VehicleRepository;
 import com.scaler.parkinglot.services.ParkingLotService;
 import com.scaler.parkinglot.services.TicketService;
+import com.scaler.parkinglot.services.VehicleService;
 import com.scaler.parkinglot.strategies.spotassignmentstrategy.RandomSpotAssignmentStrategy;
 import com.scaler.parkinglot.strategies.spotassignmentstrategy.SpotAssignmentStrategy;
+
 
 public class Client {
 
@@ -31,6 +35,11 @@ public class Client {
         ObjectRegistry.put("ticketController", new TicketController(
                 (TicketService) ObjectRegistry.get("ticketService")
         ));
+
+        ObjectRegistry.put("vehicleRepository",new VehicleRepository());
+        ObjectRegistry.put("vehicleService", new VehicleService((VehicleRepository) ObjectRegistry.get("vehicleRepository")));
+        ObjectRegistry.put("vehicleController", new VehicleController((VehicleService) ObjectRegistry.get("vehicleService")));
+
 
 
         ParkingLotController parkingLotController = (ParkingLotController) ObjectRegistry.get("parkingLotController");
