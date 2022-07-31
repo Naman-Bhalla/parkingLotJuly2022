@@ -1,12 +1,23 @@
 package com.scaler.parkinglot.dtos;
 
 import com.scaler.parkinglot.models.EntryGate;
+import com.scaler.parkinglot.models.SpotType;
 import com.scaler.parkinglot.models.Vehicle;
 
 public class GenerateTicketRequestDto {
     private Vehicle vehicle;
     private EntryGate entryGate;
     private Long parkingLotId;
+
+    private SpotType spotType;
+
+    public SpotType getSpotType() {
+        return spotType;
+    }
+
+    public void setSpotType(SpotType spotType) {
+        this.spotType = spotType;
+    }
 
     public Long getParkingLotId() {
         return parkingLotId;

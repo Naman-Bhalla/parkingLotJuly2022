@@ -2,6 +2,8 @@ package com.scaler.parkinglot.controllers;
 
 import com.scaler.parkinglot.dtos.GenerateTicketRequestDto;
 import com.scaler.parkinglot.dtos.GenerateTicketResponseDto;
+import com.scaler.parkinglot.dtos.ResponseStatusDto;
+import com.scaler.parkinglot.models.Ticket;
 import com.scaler.parkinglot.services.TicketService;
 
 public class TicketController {
@@ -14,6 +16,12 @@ public class TicketController {
     public GenerateTicketResponseDto generateTicket(
             GenerateTicketRequestDto request
     ) {
-        return null;
+      Ticket createdTicket =  ticketService.generateTicket(request.getParkingLotId(),request.getVehicle(),request.getSpotType(), request.getEntryGate());
+
+      GenerateTicketResponseDto response=new GenerateTicketResponseDto();
+      response.setTicket(createdTicket);
+      response.setResponseStatus(ResponseStatusDto.SUCCESS);
+      return response;
+
     }
 }

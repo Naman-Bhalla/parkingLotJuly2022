@@ -1,8 +1,10 @@
 package com.scaler.parkinglot.services;
 
 import com.scaler.parkinglot.controllers.ParkingLotController;
-import com.scaler.parkinglot.models.ParkingLot;
+import com.scaler.parkinglot.models.*;
 import com.scaler.parkinglot.repositories.ParkingLotRepository;
+
+import java.util.List;
 
 public class ParkingLotService {
     private ParkingLotRepository parkingLotRepository;
@@ -28,4 +30,31 @@ public class ParkingLotService {
 
         return updatedParkingLot;
     }
+
+    public ParkingSpot addSpotToParkingLot(long parkingLotId, SpotType spotType, int spotNo, int floorNo)
+    {
+        ParkingLot parkingLot=parkingLotRepository.getById(parkingLotId);
+        ParkingFloor floor=parkingLot.getParkingFloors().get(floorNo);
+
+        ParkingSpot createdSpot= new ParkingSpot();
+        createdSpot.setSpotNumber(spotNo);
+        createdSpot.setParkingSpotStatus(ParkingSpotStatus.AVAILABLE);
+        createdSpot.setSpotType(spotType);
+        createdSpot.setParkingFloor(floor);
+
+
+        floor.getParkingSpots().add(createdSpot);
+        parkingLot.getParkingFloors().set(floorNo,floor);
+
+        parkingLotRepository.update(parkingLotId,parkingLot);
+
+
+//        if(floor.getParkingSpots().add(createdSpot))
+//        {
+            return createdSpot;
+//        }
+//        return null;
+    }
+
+
 }

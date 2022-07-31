@@ -4,7 +4,7 @@ public class ParkingSpot extends BaseModel {
     private int spotNumber;
     private ParkingFloor parkingFloor;
     private SpotType spotType;
-    private ParkingSpotStatus parkingSpotStatus;
+    private ParkingSpotStatus parkingSpotStatus ;
 
     public int getSpotNumber() {
         return spotNumber;
@@ -16,6 +16,14 @@ public class ParkingSpot extends BaseModel {
 
     public SpotType getSpotType() {
         return spotType;
+    }
+
+    public ParkingFloor getParkingFloor() {
+        return parkingFloor;
+    }
+
+    public void setParkingFloor(ParkingFloor parkingFloor) {
+        this.parkingFloor = parkingFloor;
     }
 
     public void setSpotType(SpotType spotType) {

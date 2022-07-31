@@ -3,6 +3,7 @@ package com.scaler.parkinglot.controllers;
 import com.scaler.parkinglot.dtos.*;
 import com.scaler.parkinglot.models.ParkingFloor;
 import com.scaler.parkinglot.models.ParkingLot;
+import com.scaler.parkinglot.models.ParkingSpot;
 import com.scaler.parkinglot.services.ParkingLotService;
 
 import java.util.ArrayList;
@@ -51,6 +52,23 @@ public class ParkingLotController {
         responseDto.setParkingLot(updatedParkingLot);
         responseDto.setResponseStatus(ResponseStatusDto.SUCCESS);
         return responseDto;
+    }
+
+    public AddSpotResponseDto addSpotToParkingLot(AddSpotRequestDto request)
+    {
+
+      ParkingSpot createdSpot= parkingLotService.addSpotToParkingLot(request.getParkingLotId(),request.getSpotType(),
+                                                request.getSpotNumber(), request.getParkingFloorNo() );
+
+      AddSpotResponseDto response = new AddSpotResponseDto();
+      response.setCreatedSpot(createdSpot);
+
+      if(createdSpot==null)
+          response.setResponseStatus(ResponseStatusDto.FAILURE);
+      else
+        response.setResponseStatus(ResponseStatusDto.SUCCESS);
+      return response;
+
     }
 }
 

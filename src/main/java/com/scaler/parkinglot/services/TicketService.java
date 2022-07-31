@@ -23,7 +23,9 @@ public class TicketService {
 
     public Ticket generateTicket(Long parkingLotId, Vehicle vehicle, SpotType spotType, EntryGate entryGate) {
         // 1. Find a spot
-        //
+        //2.Create ticket
+        // 3. Save
+        // 4. Return
         ParkingLot parkingLot = parkingLotRepository.getById(parkingLotId);
 
         ParkingSpot parkingSpot = spotAssignmentStrategy.assignSpot(
@@ -42,6 +44,8 @@ public class TicketService {
         ticket.setParkingSpot(parkingSpot);
         ticket.setVehicle(vehicle);
         ticket.setEntryTime(new Date());
+
+        ticketRepository.save(ticket);
 
 
         return ticket;
